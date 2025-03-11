@@ -1,3 +1,73 @@
+/* Fullscreen Intro */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #EAEAEA; /* Adjust to match your brand */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Horizontal Bars */
+.bar {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: black;
+    transition: transform 1s ease-in-out;
+}
+
+.top-bar {
+    top: 0;
+    transform: translateY(0);
+}
+
+.bottom-bar {
+    bottom: 0;
+    transform: translateY(0);
+}
+
+/* Logo Styling */
+#logo-container {
+    animation: fadeIn 1.5s ease-out;
+}
+
+#intro-logo {
+    width: 200px; /* Adjust as needed */
+    opacity: 0;
+    animation: logoAppear 1.5s forwards ease-in-out;
+}
+
+/* ✅ FADE IN EFFECT FOR CONTENT */
+.hidden {
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* ✅ KEYFRAMES FOR FADE-IN */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Logo Fade-In Animation */
+@keyframes logoAppear {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Main Content Initially Hidden */
+.hidden {
+    display: none;
+}
+
+
 /* Top Bar Styling */
 .top-bar {
     font-size: 16px;
